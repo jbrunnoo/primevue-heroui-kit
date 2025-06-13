@@ -44,44 +44,78 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    default: 'Button',
-  },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Button</Button>',
+  }),
 };
 
 export const Primary: Story = {
   args: {
     color: 'primary',
-    default: 'Primary Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Primary Button</Button>',
+  }),
 };
 
 export const Secondary: Story = {
   args: {
     color: 'secondary',
-    default: 'Secondary Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Secondary Button</Button>',
+  }),
 };
 
 export const Success: Story = {
   args: {
     color: 'success',
-    default: 'Success Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Success Button</Button>',
+  }),
 };
 
 export const Warning: Story = {
   args: {
     color: 'warning',
-    default: 'Warning Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Warning Button</Button>',
+  }),
 };
 
 export const Danger: Story = {
   args: {
     color: 'danger',
-    default: 'Danger Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Danger Button</Button>',
+  }),
 };
 
 export const Variants: Story = {
@@ -133,22 +167,40 @@ export const Colors: Story = {
 export const Loading: Story = {
   args: {
     isLoading: true,
-    default: 'Loading...',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Loading...</Button>',
+  }),
 };
 
 export const Disabled: Story = {
   args: {
     isDisabled: true,
-    default: 'Disabled Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Disabled Button</Button>',
+  }),
 };
 
 export const FullWidth: Story = {
   args: {
     fullWidth: true,
-    default: 'Full Width Button',
   },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Full Width Button</Button>',
+  }),
 };
 
 export const Radius: Story = {
