@@ -1,0 +1,38 @@
+{
+  "name": "@primeui/shared-utils",
+  "version": "1.0.0",
+  "description": "Shared utilities for PrimeUI components",
+  "keywords": [
+    "utils",
+    "utilities",
+    "shared"
+  ],
+  "author": "PrimeUI <support@primeui.com>",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

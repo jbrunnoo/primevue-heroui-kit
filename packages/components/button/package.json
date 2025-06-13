@@ -1,0 +1,48 @@
+{
+  "name": "@primeui/button",
+  "version": "1.0.0",
+  "description": "Button component for PrimeUI",
+  "keywords": [
+    "button",
+    "component",
+    "vue"
+  ],
+  "author": "PrimeUI <support@primeui.com>",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
+    "build:fast": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@primeui/theme": "workspace:*",
+    "@primeui/use-button": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "vue": "^3.4.0",
+    "typescript": "^5.7.3",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0"
+  },
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

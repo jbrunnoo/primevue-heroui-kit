@@ -1,0 +1,53 @@
+{
+  "name": "@primeui/theme",
+  "version": "1.0.0",
+  "description": "The default theme for PrimeUI components",
+  "keywords": [
+    "theme",
+    "theming",
+    "design",
+    "ui",
+    "components",
+    "classNames",
+    "css",
+    "primevue"
+  ],
+  "author": "PrimeUI <support@primeui.com>",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "build:fast": "tsup src",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.0",
+    "tailwind-variants": "^0.3.0",
+    "tailwind-merge": "^2.5.4",
+    "@primeui/shared-utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.4.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.3"
+  },
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}

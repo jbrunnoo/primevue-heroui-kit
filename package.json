@@ -1,0 +1,63 @@
+{
+  "name": "primevue-heroui-kit",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "PrimeVue HeroUI Kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbrunnoo/primevue-heroui-kit"
+  },
+  "scripts": {
+    "dev": "pnpm sb",
+    "build": "turbo build --filter='!@primeui/storybook'",
+    "build:fast": "turbo build:fast --filter='!@primeui/storybook'",
+    "sb": "pnpm --filter @primeui/storybook dev",
+    "build:sb": "pnpm --filter @primeui/storybook build",
+    "start:sb": "pnpm --filter @primeui/storybook start",
+    "test": "vitest",
+    "typecheck": "turbo typecheck",
+    "lint": "eslint --max-warnings=0",
+    "lint:fix": "eslint --fix",
+    "format:check": "prettier --check packages/**/**/src --cache",
+    "format:write": "prettier --write packages/**/**/src --cache",
+    "turbo:clean": "turbo clean && rimraf ./node_modules/.cache/turbo",
+    "clean": "pnpm turbo:clean && pnpm clean:lock && pnpm clean:node-modules && pnpm install",
+    "clean:node-modules": "rimraf ./apps/**/node_modules && rimraf ./packages/**/**/node_modules && rimraf ./node_modules",
+    "clean:lock": "rimraf ./pnpm-lock.yaml",
+    "create:cmp": "plop component",
+    "create:pkg": "plop package",
+    "create:hook": "plop composable",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.27.10",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/test-utils": "^2.4.0",
+    "eslint": "^9.26.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "jsdom": "^25.0.0",
+    "plop": "3.1.1",
+    "prettier": "^3.5.3",
+    "rimraf": "^3.0.2",
+    "tsup": "8.3.5",
+    "turbo": "2.4.4",
+    "typescript": "^5.7.3",
+    "vite": "^5.0.0",
+    "vitest": "^2.0.0",
+    "vue": "^3.4.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue": "^3.4.0"
+    }
+  },
+  "engines": {
+    "node": ">=20.x",
+    "pnpm": ">=9.x"
+  },
+  "packageManager": "pnpm@9.6.0"
+}

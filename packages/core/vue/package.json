@@ -1,0 +1,50 @@
+{
+  "name": "@primeui/vue",
+  "version": "1.0.0",
+  "description": "🚀 Beautiful and modern Vue UI library based on PrimeVue.",
+  "author": "PrimeUI <support@primeui.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "primevue",
+    "components",
+    "modern components",
+    "vue components",
+    "vue ui"
+  ],
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src"
+  },
+  "dependencies": {
+    "@primeui/theme": "workspace:*",
+    "@primeui/button": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "vue": "^3.4.0",
+    "typescript": "^5.7.3"
+  },
+  "tsup": {
+    "clean": true,
+    "target": "es2019",
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  }
+}
