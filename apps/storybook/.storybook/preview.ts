@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/vue3';
 import '../styles/globals.css';
+import 'primeicons/primeicons.css';
 
 const preview: Preview = {
   parameters: {
